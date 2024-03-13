@@ -5,9 +5,11 @@ import {
   Column,
   PrimaryGeneratedColumn,
   AfterRemove,
+  Unique,
 } from 'typeorm';
 
 @Entity()
+@Unique(["email"])
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
