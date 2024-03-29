@@ -37,7 +37,6 @@ export class AuthService {
 
     async signIn(email: string, password: string) {
         const [user] = await this.usersService.find(email)
-        console.log('user: ',user)
 
         if (!user) {
             throw new UnauthorizedException('email or password not correct')
